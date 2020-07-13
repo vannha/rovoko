@@ -870,7 +870,7 @@ class Rovoko_Project_Grid extends Widget_Base {
 		] );
 	}
 
-	private function rovoko_project_grid_three_layout( $settings, $image_size = '650x650') { die('xxx');
+	private function rovoko_project_grid_three_layout( $settings, $image_size = '650x650') { 
 		$projetc_meta = '';
 		if ( $settings['title'] == 'yes' || $settings['readmore'] == 'yes' || $settings['tag'] == 'yes' ) {
 
