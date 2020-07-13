@@ -1,4 +1,4 @@
-<?php die('aaa abc');
+<?php 
 /**
  * EF5Frame functions and definitions
  *
