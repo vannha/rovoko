@@ -1,0 +1,99 @@
+/* WP Search */
+.search-form label {
+  display: block;
+}
+
+.search-form,
+.woocommerce-product-search {
+  position: relative;
+
+  input[name="s"],
+  [type="submit"] {
+   // @include border-radius(2px);
+  }
+
+  input[name="s"] {
+    padding: 11px 118px 11px 20px;
+    font-size: 14px;
+    border-radius: 0;
+    border: 1px solid $primary_color;
+    background: none;
+
+    [dir="rtl"] & {
+      padding-left: 118px;
+      padding-right: 20px;
+    }
+
+  }
+
+  input:-webkit-autofill + .search-btn {
+    right: 0;
+
+    [dir="rtl"] & {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  [type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 36px;
+    text-align: center;
+    border: none;
+    padding: 0;
+    min-width: 75px;
+    background-color: $primary_color;
+    color: $white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1;
+
+    [dir="rtl"] & {
+      right: auto;
+      left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background: $accent_color;
+      color: $white;
+    }
+  }
+}
+
+/* Search Form In Popup */
+.mfp-content {
+  .search-form,
+  .woocommerce-product-search {
+    color: $white;
+
+    input {
+      background: #fff;
+      height: auto;
+      box-shadow: none;
+
+      [dir="rtl"] & {
+        padding-right: 0;
+        padding-left: 60px;
+      }
+    }
+
+    @media (min-width: $screen-md-min) {
+      input {
+        width: 470px;
+      }
+      [type="submit"],
+      &:after {
+        top: 0px;
+        span {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

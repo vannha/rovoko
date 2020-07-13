@@ -1,0 +1,66 @@
+@import 'parallax';
+@import 'title';
+@import 'breadcrumb';
+@import 'layout1';
+
+.page {
+  .ef5-pagetitle-wrap {
+    margin-bottom: 121px;
+    @media (max-width: $screen-lg-max) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.woocommerce-page .ef5-pagetitle-wrap,
+.ef5-pagetitle-wrap {
+  margin-bottom: 138px;
+  @media (max-width: $screen-lg-max) {
+    margin-bottom: 110px;
+  }
+}
+
+.ef5-pagetitle {
+  position: relative;
+  background-color: $accent_color;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $white;
+  padding: 276px 0;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $primary_color;
+    }
+  }
+
+  @media (max-width: $screen-lg-max) {
+    padding: 200px 0;
+    .page-title {
+      font-size: $BodyFontSize * 2;
+    }
+    .page-desc {
+      font-size: $BodyFontSize;
+    }
+  }
+  @media (max-width: $screen-md-max) {
+    padding: 150px 0;
+  }
+}
+
+.ef5-pagetitle-inner {
+  position: relative;
+  z-index: 900;
+
+}
+
+.header-ontop {
+  + .ef5-pagetitle-wrap .ef5-pagetitle {
+    .ef5-pagetitle-inner {
+      padding: 200px 0 115px;
+    }
+  }
+}

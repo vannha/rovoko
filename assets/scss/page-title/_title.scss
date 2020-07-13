@@ -1,0 +1,14 @@
+.page-title{
+	color: inherit;
+	text-transform: uppercase;
+}
+.page-desc{
+    color: $lightent_accent_accent;
+	font-size: $BodyFontSizeL + 2;
+	line-height: 1.5;
+}
+.page-title{
+	@media (min-width: $screen-xl-min){
+		font-size: 48px;
+	}
+}

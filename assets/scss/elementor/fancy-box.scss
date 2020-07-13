@@ -1,0 +1,366 @@
+.elementor-widget-rovoko_fancybox {
+  &.layout-2 {
+    .elementor-widget-container {
+      box-shadow: 0px 0px 114px 0px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .fancybox-content {
+    .fancybox-icon {
+      @include transition();
+      display: inline-block;
+      padding: 25px;
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 5px;
+      color: #FFBF72;
+      border-width: 0;
+      border-style: solid;
+      border-color: #E4E9F7;
+      border-radius: 50%;
+      background-color: $white;
+
+      i {
+        font-size: $BodyFontSize * 2;
+        width: 1em;
+        height: 1em;
+        position: relative;
+        display: block;
+
+        &:before {
+          position: absolute;
+          left: 50%;
+          @include transform(translateX(-50%));
+        }
+      }
+    }
+
+    .box-img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    .readmore-btn {
+      @media (min-width: $screen-xl-min) and (max-width: $screen-xxl-min), (max-width: $screen-md-min) {
+        a {
+          padding: 0 20px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+
+  .fancybox-content {
+    overflow: hidden;
+
+    &.fancybox-layout-1 {
+      position: relative;
+
+      &:before {
+        content: '';
+        background-color: $black;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        opacity: 0.7;
+        @include transition(opacity 500ms ease-in);
+      }
+
+      figure.box-img img {
+        width: 100%;
+      }
+
+      .box-content {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 65px 60px;
+
+        .heading-title {
+          color: $white;
+        }
+
+        .visible-content {
+          opacity: 1;
+          @include transform(translateY(0));
+          @include transition(all 500ms ease);
+        }
+
+        .hidden-content {
+          @include transform(translateY(100%));
+          @include transition(all 500ms ease-in);
+          opacity: 0;
+
+          .des {
+            padding: 10px 0 0 0;
+            color: $lightent_accent_accent;
+          }
+
+          .readmore-btn {
+            padding-top: 38px;
+          }
+        }
+
+        @media (min-width: $screen-xl-min) and (max-width: $screen-xxl-min), (max-width: $screen-xs-max) {
+          padding: 35px 30px;
+          .hidden-content {
+            .des {
+              padding-top: 0;
+              line-height: unset;
+            }
+
+            .readmore-btn {
+              padding-top: 20px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        &:before {
+          opacity: 0.9;
+        }
+
+        .box-content {
+          .visible-content {
+            opacity: 0;
+            @include transform(translateY(-100px));
+            height: 0;
+            overflow: hidden;
+          }
+
+          .hidden-content {
+            @include transform(translateY(0));
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &.fancybox-layout-2 {
+      padding: 45px 60px;
+      text-align: center;
+      @media (max-width: $screen-md-max) {
+        padding: 30px 15px;
+      }
+
+      h1.heading-title {
+        margin-bottom: 5px;
+      }
+
+      .heading-title {
+        color: $accent_color;
+      }
+
+      .des {
+        color: $accent_color;
+        font-size: $BodyFontSizeL - 1;
+        line-height: 1.64705882;
+      }
+
+      .readmore-btn {
+        padding-top: 5px;
+      }
+    }
+
+    &.fancybox-layout-3 {
+      overflow: unset;
+      text-align: center;
+
+      &:hover {
+        .fancybox-icon {
+          background-color: $primary_color;
+          color: $white;
+          box-shadow: 0px 10px 30px 0px rgba(90, 120, 205, 0.3);
+        }
+      }
+
+      .heading-title {
+        color: #41508A;
+      }
+    }
+
+    &.fancybox-layout-4 {
+      text-align: center;
+
+      &:hover {
+        .visible-content {
+          .desandicon {
+            opacity: 1;
+            @include transform(translateY(-50%));
+          }
+
+          &:before {
+            top: 0;
+          }
+        }
+      }
+
+      .visible-content {
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: $primary_color;
+          @include transition();
+        }
+
+        .desandicon {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          bottom: auto;
+          align-items: center;
+          max-height: 100%;
+          overflow: hidden;
+          padding: 25px;
+          overflow: overlay;
+          opacity: 0;
+          @include transition();
+          @include transform(translateY(100%));
+        }
+
+        .des, i {
+          color: $white;
+        }
+
+        .des {
+          font-size: 17px;
+          line-height: 1.5;
+          padding-top: 12px;
+        }
+
+        .fancybox-icon {
+          padding: 3px;
+          margin-bottom: 0;
+          background-color: transparent;
+
+          i {
+            font-size: 100px;
+            @media (max-width: $screen-md-max) {
+              font-size: 80px;
+            }
+          }
+        }
+      }
+    }
+
+    &.fancybox-layout-5 {
+      &:before {
+        content: '';
+        background-color: $black;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        opacity: 0.6;
+        @include transition(opacity 500ms ease-in);
+      }
+
+      .box-content {
+        padding: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        overflow: hidden;
+        .heading-title {
+          color: $white;
+          line-height: 1.3;
+        }
+
+        .sub_title {
+          color: #999999;
+        }
+        .visible-content {
+          text-align: left;
+          @include transform(translateY(0));
+          @include transition();
+        }
+        .des, .sub_title_sec {
+          color: $white;
+        }
+
+        .des {
+          margin-top: 10px;
+          line-height: 1.75;
+        }
+
+        .readmore-btn {
+          padding-top: 13px;
+        }
+        .hidden-content {
+          padding: 50px;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          max-height: 100%;
+          bottom: auto;
+          overflow: overlay;
+          opacity: 0;
+          @include transform(translateY(calc(-150% - 50px)));
+          @include transition();
+
+        }
+
+        .subtitle.sub_title_sec {
+          font-size: 80px;
+          line-height: 1.05;
+          font-weight: bold;
+        }
+
+        @media (max-width: $screen-md-max) {
+          padding: 25px;
+          .hidden-content {
+            padding: 25px;
+          }
+          .readmore-btn {
+            padding-top: 19px;
+          }
+        }
+      }
+
+      &:hover {
+        .box-content {
+          .hidden-content {
+            @include transform(translateY(-50%));
+            opacity: 1;
+          }
+
+          .visible-content {
+            @include transform(translateY(calc(100% + 50px)));
+          }
+        }
+
+        &:before {
+          background-color: #0047bb;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

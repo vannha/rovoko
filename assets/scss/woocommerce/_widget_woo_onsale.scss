@@ -1,0 +1,143 @@
+.elementor-widget-wp-widget-rovoko_woo_onsale,
+.widget.widget_rovoko_woo_onsale {
+  padding: 21px 0px;
+  box-shadow: none;
+
+  .widgettitle, h5 {
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+
+    .ef5-owl-nav {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-top: 0;
+
+      button {
+        width: 24px;
+        height: 24px;
+        color: $darkent_accent_accent;
+        background: #ffffff;
+        border-radius: 3px;
+        position: relative;
+
+        &:hover {
+          color: $white;
+          background-color: $primary_color;
+        }
+
+        span:before {
+          font-size: $BodyFontSizeXXS;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+        }
+      }
+    }
+  }
+
+  .ef5-owl {
+    box-shadow: 0px 125px 250px 0px rgba(000000, 0, 0, 0.15);
+    border: 1px solid #ebebeb;
+    margin: 0;
+    position: relative;
+
+    .owl-stage-outer {
+      margin: 0;
+      padding: 0;
+      min-height: 482px;
+    }
+  }
+
+  .product-meta {
+    padding: 25px 31px;
+
+    .ef5-loop-product-title {
+      padding: 0;
+    }
+
+    .ef5-products-price {
+      @include product_price();
+
+      .woocs_price_code {
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        align-items: center;
+
+        del {
+          order: 2;
+          margin-right: 0;
+          margin-left: 6px;
+        }
+
+        ins {
+          order: 1;
+          margin-right: 6px;
+          margin-left: 0;
+        }
+
+        [dir="rtl"] & {
+          del {
+            margin-right: 6px;
+            margin-left: 0;
+          }
+
+          ins {
+            margin-right: 0;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+
+    .ef5-countdown {
+      .ef5-countdown-time {
+        border-top: $MainBorder;
+        margin-top: 16px;
+        padding-top: 12px;
+
+        .item {
+          .item-content {
+            .amount {
+              background-color: $primary_color;
+              width: 38px;
+              height: 38px;
+              @include border-radius(50%);
+              font-size: $BodyFontSize;
+              line-height: 2.5;
+              font-family: Rubik;
+              color: $white;
+              display: block;
+              text-align: center;
+            }
+
+            .title {
+              text-transform: uppercase;
+              font-family: Rubik;
+              font-size: $BodyFontSizeXXS;
+            }
+          }
+        }
+      }
+    }
+
+    .inventory {
+      font-size: $BodyFontSizeXXS;
+      line-height: 1.8;
+      margin-top: 27px;
+      margin-bottom: 4px;
+    }
+
+    .progress {
+      min-height: 10px;
+
+      .progress-bar {
+        background-color: $primary_color;
+        @include border-radius(5px);
+      }
+    }
+  }
+}

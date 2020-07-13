@@ -1,0 +1,9 @@
+.ef5-tagged-in{
+	color: $accent_color;
+	a{
+		color: $lightent_accent_accent;
+		&:hover{
+			color: $accent_color;
+		}
+	}
+}

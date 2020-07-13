@@ -1,0 +1,73 @@
+.elementor-widget-rovoko_progress {
+  .rovoko-progress-wrapper {
+    .progress-content {
+      background-color: #f3f4f6;
+      flex: 7.5;
+      border-radius: 50px;
+    }
+
+    div.rovoko-progress-title {
+      font-size: $BodyFontSizeS;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #252525;
+      line-height: 2;
+    }
+
+    .rovoko-progress-bar {
+      background-color: $primary_color;
+      width: 0;
+      height: 10px;
+      @include transition(width 1s ease-in-out);
+      position: relative;
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-left-radius: 50px;
+      border-top-left-radius: 50px;
+
+      .progress-point {
+        position: absolute;
+        min-height: calc(100% + 16px);
+        right: 0;
+        font-size: 10px;
+        top: 50%;
+        background: #ffffff;
+        @include transform(translate(50%, -50%));
+        box-shadow: 0px 5px 20px 0px rgba(135, 153, 163, 0.35);
+        border-radius: 50%;
+
+        &:after {
+          content: '';
+          width: calc(1em + 16px);
+          height: calc(1em + 16px);
+          display: block;
+        }
+      }
+
+      [dir="rtl"] & {
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-right-radius: inherit !important;
+        border-top-right-radius: inherit !important;
+
+        .progress-point {
+          right: unset;
+          left: 0;
+          @include transform(translate(-50%, -50%));
+        }
+      }
+    }
+
+    .rovoko-progress-percentage {
+      flex: 1;
+      text-align: right;
+      font-size: $BodyFontSizeS;
+      font-weight: bold;
+      color: #252525;
+
+      [dir="rtl"] & {
+        text-align: left;
+      }
+    }
+  }
+}

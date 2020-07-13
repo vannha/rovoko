@@ -1,0 +1,109 @@
+.footer-layout-1 {
+  background-color: #161616;
+  padding-top: 2px;
+
+  .widget {
+    .widgettitle {
+      margin-bottom: 20px;
+    }
+
+    &.widget_rovoko_contact_us {
+      .ef5-btn{
+        background-color: $footer_regular;
+        &:hover{
+          background-color: $footer_hover;
+        }
+        &:active{
+          background-color: $footer_active;
+        }
+      }
+      ul {
+        li span{
+          color: $footer_regular;
+        } 
+        &.contact-layout-2 {
+          li span[class^="flaticon-"]:before {
+            color: $footer_regular;
+          }
+        }
+      }
+    }
+  }
+
+  .social-items {
+    margin: 12px auto;
+
+    a {
+      height: 42px;
+      width: 42px;
+      margin: 0 5px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.03);
+      line-height: 2.93;
+      margin-bottom: 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    font-family: Rubik;
+
+    .copyright {
+      a {
+        color: $primary_color;
+      }
+    }
+
+    .footer-menu {
+      text-align: right;
+      @media (max-width: $screen-md-max) {
+        text-align: left;
+      }
+      li {
+        display: inline-block;
+        margin: 0px 22px 0 23px;
+        position: relative;
+
+        &.current-menu-item {
+          a {
+            color: $footer_active;
+          }
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+
+          &:after {
+            content: none;
+          }
+        }
+
+        &:after {
+          content: '-';
+          position: absolute;
+          right: -28px;
+          color: #a6a6a6;
+        }
+
+        .sub-menu {
+          display: none;
+        }
+
+      }
+    }
+  }
+}

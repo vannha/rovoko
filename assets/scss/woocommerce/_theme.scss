@@ -1,0 +1,6 @@
+.post-type-archive-product .ef5-posts{
+	.ef5-loop-pagination{
+		@include d-flex();
+		justify-content: center;
+	}
+}

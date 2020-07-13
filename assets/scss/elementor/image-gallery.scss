@@ -1,0 +1,70 @@
+.elementor-widget-rovoko_image_gallery {
+  .fotorama__nav {
+    .fotorama__nav__frame--dot {
+      .fotorama__dot {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+      }
+
+      &.fotorama__active {
+        .fotorama__dot {
+          background-color: $primary_color;
+          border-color: $primary_color;
+        }
+      }
+    }
+    .fotorama__thumb-border{
+      border-color: $primary_color;
+    }
+  }
+
+  .fotorama__nav, .fotorama__nav {
+    &:after, :before {
+      content: none;
+    }
+  }
+
+  .fotorama__arr {
+    &.fotorama__arr--next,
+    &.fotorama__arr--prev {
+      width: 35px;
+      height: 35px;
+      color: $accent_color;
+      background-color: $white;
+      background-image: none;
+
+      &:hover, &:active {
+        background-color: $accent_color;
+        color: $white;
+      }
+
+      &:before {
+        font-family: $FontEF5Frame;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10px;
+      }
+    }
+
+    &.fotorama__arr--prev {
+      left: 20px;
+
+      &:before {
+        content: "\f110";
+      }
+    }
+
+    &.fotorama__arr--next {
+      right: 20px;
+
+      &:before {
+        content: "\f10e";
+      }
+    }
+  }
+}

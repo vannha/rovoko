@@ -1,0 +1,71 @@
+@import 'overlay';
+$hover-dir: (
+	top,
+	right,
+	bottom,
+	left
+);
+$fade-in: (
+	top: slideInDown,
+	right: slideInRight,
+	bottom: slideInUp,
+	left: slideInLeft
+);
+
+$fade-out: (
+	top: slideOutUp,
+	right: slideOutRight,
+	bottom: slideOutDown,
+	left: slideOutLeft
+);
+// Image Hover 
+[class*="img-hover-"]{
+	.image-hover{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		span{
+			display: inline-block;
+			vertical-align: top;
+		}
+		&:hover{
+			.img-static{
+				opacity: 0;
+				visibility: hidden;
+			}
+			.img-hover{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	.img-static{
+		transition: all .4s linear;
+	}
+	.img-hover{
+		transition: all .4s linear;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    opacity: 0;
+	    visibility: hidden;
+	}
+}
+$img-hover:(
+	'grow-up' : scale(.8,.8) scale(1,1),
+	'slide-up' : translateY(20px) translateY(0),
+	'slide-down' : translateY(-20px) translateY(0),
+	'fade-in' : ''
+);
+@each $name, $style in $img-hover{
+	.img-hover-#{$name}{
+		.img-hover{
+			transform: nth($style, 1);
+		}
+		.image-hover:hover{
+			.img-hover{
+				transform: nth($style, 2);
+			}
+		}
+	}
+}

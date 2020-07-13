@@ -1,0 +1,22 @@
+.widget_text{
+	.textwidget{
+		p {
+			img{
+				margin-left: 0;
+			}
+			&:empty{
+				display: none;
+			}
+			> strong{
+				margin: 15px 0;
+				display: inline-block;
+				&:first-child{
+					margin-top: 0;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

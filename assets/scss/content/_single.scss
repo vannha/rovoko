@@ -1,0 +1,116 @@
+.ef5-single-header {
+  .ef5-heading {
+    font-size: 45px;
+    line-height: 1.3;
+    margin-bottom: 37px;
+    @media (max-width: $screen-lg-max) {
+      font-size: 38px;
+    }
+  }
+}
+
+.ef5-featured {
+  .post-image + .ef5-posted-in {
+    position: absolute;
+    left: 28px;
+    top: 24px;
+    max-height: calc(100% - 48px);
+    overflow: auto;
+    right: 28px;
+    &:before,&:after{
+      content: none;
+    }
+  }
+
+  .ef5-posted-in {
+    //background-color: $primary_color;
+    color: $white;
+    //padding: 0 30px;
+
+    a {
+      color: inherit;
+      text-transform: uppercase;
+      font-size: $BodyFontSizeXXS;
+      line-height: 14px;
+      font-weight: 500;
+      margin: 5px;
+      padding: 8px 15px;
+      display: inline-block;
+      background-color: $primary_color;
+      color: inherit;
+      @media (max-width: $screen-lg-max) {
+        padding: 5px 10px;
+        text-transform: initial;
+      }
+
+      &:hover {
+        background-color: $accent_color;
+      }
+    }
+  }
+}
+
+.ef5-single-content,
+.ef5-single-page-links {
+  margin-bottom: $grid-gutter-width;
+}
+
+.ef5-single-page-links {
+
+}
+
+.ef5-single-content {
+  .blockquote,
+  blockquote {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.ef5-pwbox-inner {
+  display: flex;
+
+  input[type="submit"] {
+
+  }
+
+  input[name="post_password"] {
+    border-color: var(--primary-color);
+    border-radius: 0;
+  }
+}
+
+.ef5-single-footer {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    border-top: $MainBorder;
+    top: 0;
+    left: 15px;
+    right: 15px;
+  }
+
+  .ef5-tagged-in,
+  .ef5-shares {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .ef5-shares {
+    color: $accent_color;
+
+    .ef5-social a {
+      span {
+        color: $accent_color;
+      }
+
+      &:hover {
+        span {
+          color: $primary_color;
+        }
+      }
+    }
+  }
+}

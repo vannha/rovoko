@@ -1,0 +1,23 @@
+.custom-html-widget {
+  .woo-fancybox {
+    li {
+      padding: 20px 0 20px 53px;
+      border-bottom: $MainBorder;
+      position: relative;
+      font-size: $BodyFontSize;
+      color: $darkent_accent_accent;
+      &:last-child {
+        border-bottom: none;
+      }
+
+      i:before {
+        font-size: $BodyFontSize * 3 - 7;
+        color: $primary_color;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+}

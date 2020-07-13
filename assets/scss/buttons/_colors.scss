@@ -1,0 +1,44 @@
+.ef5-btn{
+	@each $name, $color in $ef5-colors{
+		&.#{$name}{
+			&.fill{
+			    //color: $white;
+			    background-color: $color;
+			    &:hover{
+			    	//background-color: darken($color, 10);
+			    }
+			}
+			&.boxshadow{
+				box-shadow: 0px 11px 20px 0px rgba(244, 116, 94, 0.34);
+			}
+			&.outline{
+				color: $color;
+				border-color: $color;
+				background: transparent;
+				&:hover{
+			    	background-color: $color;
+			    	border-color: $color;
+			    	color: $white;
+			    }
+			}
+			&.outline2{
+				color: $primary_color;
+				border-color: $color;
+				background: transparent;
+				&:hover{
+			    	background-color: $color;
+			    	border-color: $color;
+			    	color: $white;
+			    }
+			}
+			&.ef5-btn-hover-outline:hover{
+				background: transparent;
+				color: $color;
+				border-color: $color;
+			}
+		}
+		&.white.fill{
+			color: $primary_color;
+		}
+	}
+}

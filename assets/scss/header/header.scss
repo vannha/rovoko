@@ -1,0 +1,20 @@
+@import 'header_layout1';
+@import 'header_layout2';
+@import 'header_layout3';
+@import 'header_ontop';
+@import 'header_sticky';
+@import 'header_top';
+@import 'icons';
+@import 'logo';
+#ef5-header-wrap{
+	position: relative;
+}
+.ef5-header{
+	@include transition(all 0.5s);
+}
+.main-header{
+	position: relative;
+}
+.mfp-hide{
+	display: none;
+}

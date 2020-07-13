@@ -1,0 +1,135 @@
+$thumb_w: 81px;
+$thumb_h: 93px;
+$space: 30px;
+.product_list_widget {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: #{$space/2} 0 #{$space/2} #{$thumb_w + $space/2};
+    min-height: #{$thumb_h + $space};
+    border-bottom: 1px solid #dddddd;
+
+    &:last-child {
+      //border-bottom: none;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    > *:not(.star-rating) {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+
+    [dir="rtl"] & {
+      padding-left: 0;
+      padding-right: #{$thumb_w + $space};
+    }
+
+    > a {
+      margin-top: 11px;
+    }
+
+    &.mini_cart_item {
+      padding: #{$space/1.5} 0 #{$space/1.5} #{$thumb_w + $space/2};
+      min-height: #{$thumb_h + ($space/1.5)*2};
+
+      img {
+        top: #{$space/1.5};
+        bottom: #{$space/1.5};
+      }
+
+      .remove {
+        top: #{$space/1.5};
+      }
+    }
+  }
+
+  img {
+    max-width: $thumb_w;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: #{$space/2};
+    bottom: #{$space/2};
+    width: $thumb_w;
+    height: $thumb_h;
+
+    [dir="rtl"] & {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .remove {
+    position: absolute;
+    top: #{$space/2};
+    left: 0;
+    padding: 0;
+    margin: 0;
+    display: block !important;
+    width: 20px !important;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: $red;
+    color: $white;
+    z-index: 1;
+
+    [dir="rtl"] & {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .product-title {
+    font-size: $BodyFontSizeS;
+    color: $HeadingColor;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+  }
+
+  .ef5-products-price {
+    font-size: $BodyFontSize;
+    font-weight: 700;
+    font-family: Rubik;
+    color: $primary_color;
+    line-height: 1.2;
+    margin-top: 17px;
+  }
+
+  .star-rating {
+    margin-top: 5px;
+    max-width: 64px;
+
+    span:before,
+    &:before {
+      font-size: 10px;
+    }
+
+    & + .ef5-products-price {
+      margin-top: 0;
+    }
+  }
+}
+
+.woocommerce {
+  .ef5-sidebar-area {
+    .widget {
+      &.widget_custom_html:first-child {
+        @include border-radius(0 0 10px 10px);
+      }
+    }
+  }
+}
+
+@import 'widget_layered_nav';
+@import 'widget_layered_nav_filters';
+@import 'widget_price_filter';

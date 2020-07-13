@@ -1,0 +1,87 @@
+.elementor-widget-rovoko_alert {
+  .elementor-widget-container {
+    padding: 22px 30px;
+    background-color: #e5e5e5;
+
+    .reovko-alert {
+      position: relative;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      .alert-icon {
+        @include transition();
+        display: inline-block;
+        padding: 11px;
+        font-size: 50px;
+        text-align: center;
+        line-height: 1;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: $primary_color;
+
+        .icon {
+          font-size: $BodyFontSizeL;
+          width: 1em;
+          height: 1em;
+          position: relative;
+          display: block;
+          color: $white;
+
+          &.text {
+            min-width: 18px;
+            min-height: 18px;
+            letter-spacing: -1.2px;
+            width: auto;
+            height: auto;
+          }
+
+          span,
+          &:before {
+            position: absolute;
+            left: 50%;
+            @include transform(translateX(-50%));
+          }
+        }
+      }
+
+      .alert-conetnt {
+        margin-left: 15px;
+      }
+
+      [dir="rtl"] & {
+        .alert-icon {
+          margin-right: 0;
+          margin-left: 15px;
+        }
+
+        .alert-conetnt {
+          margin-right: 15px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 10px 16px;
+      .reovko-alert {
+        .alert-icon {
+          margin-right: 8px;
+        }
+
+        .alert-conetnt {
+          margin-left: 8px;
+        }
+
+        [dir="rtl"] & {
+          .alert-icon {
+            margin-left: 8px;
+          }
+
+          .alert-conetnt {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}

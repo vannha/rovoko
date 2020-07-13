@@ -1,0 +1,132 @@
+.header-layout-2 {
+  .main-header {
+    padding: 27px 0 39px 0;
+
+    .ef5-logo {
+      flex: 0.82;
+    }
+
+    .ef5-navigation-wrap {
+      .search-form {
+        .search-field, select {
+          font-size: $BodyFontSize !important;
+        }
+
+        .search-field {
+          border-width: 2px;
+          border-color: $primary_color;
+          border-width: 2px 0 2px 2px;
+          background-color: $white;
+
+          [dir="rtl"] & {
+            border-width: 2px 2px 2px 0;
+          }
+        }
+
+        [type="submit"] {
+          width: auto;
+          min-width: 75px;
+          @include border-radius(0 3px 3px 0);
+
+          [dir="rtl"] & {
+            @include border-radius(3px 0 0 3px);
+          }
+        }
+
+        &.woocommerce-product-search {
+          display: flex;
+
+          .search-field {
+            padding-right: 20px;
+            @include border-radius(3px 0 0 3px);
+
+            [dir="rtl"] & {
+              @include border-radius(0 3px 3px 0);
+            }
+          }
+
+          select {
+            line-height: 50px;
+            padding: 0px 35px 0px 20px;
+            background-size: 10px;
+            border-width: 2px 0 2px 0;
+            border-color: $primary_color;
+            border-style: solid;
+            @include border-radius(0);
+            width: auto;
+            cursor: pointer;
+
+            [dir="rtl"] & {
+              padding: 0px 20px 0px 35px;
+            }
+          }
+
+          [type="submit"] {
+            position: unset;
+          }
+
+        }
+      }
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 15px 0 20px 0;
+      .ef5-navigation-wrap {
+        .search-form {
+          .search-field {
+            padding: 5px 10px;
+            font-size: $BodyFontSizeXS !important;
+          }
+
+          [type="submit"] {
+            min-width: auto;
+            padding: 0 15px;
+
+            span:before {
+              font-size: $BodyFontSize;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: $screen-lg-max) {
+      padding: 20px 0 25px 0;
+      .ef5-logo {
+        flex: unset;
+      }
+    }
+
+  }
+
+  .sub-header {
+
+    position: relative;
+
+    .ef5-header-menu,
+    .nav-extra {
+
+      .header-cart-subtotal,
+      .btn-nav-mobile {
+        font-family: Rubik;
+      }
+    }
+
+    .nav-extra {
+      justify-content: space-between;
+    }
+
+    .ef5-header-menu {
+      li a {
+        text-transform: uppercase;
+      }
+    }
+
+    @media (max-width: $screen-lg-max) {
+      .header-inner {
+        > div:first-child {
+          min-height: 55px;
+        }
+      }
+    }
+  }
+}

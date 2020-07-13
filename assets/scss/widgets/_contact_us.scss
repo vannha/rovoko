@@ -1,0 +1,94 @@
+.elementor-widget-wp-widget-rovoko_contact_us,
+.widget_rovoko_contact_us {
+  .rovoko-contactus {
+    ul{
+      list-style: none;
+    }
+    ul li {
+      padding: 6px 0;
+      &.desc {
+        margin-bottom: 22px;
+        p{
+          margin-bottom: 16px;
+        }
+        .ef5-btn {
+          font-size: $BodyFontSizeS;
+          text-transform: none;
+          font-style: italic;
+          display: initial;
+          width: auto;
+          line-height: 30px;
+          padding: 5px 10px;
+          border-radius: 3px;
+          font-weight: 500;
+          color: $white;
+        }
+      }
+
+      &.payment-method {
+        padding: 5px 0;
+
+        span {
+          min-width: 50px;
+          min-height: 30px;
+          margin-right: 8px;
+          background-image: url(../images/payment.png);
+          display: inline-block;
+
+          &.payment_visa {
+            background-position: 0;
+          }
+
+          &.payment_master {
+            background-position-x: 174px;
+          }
+
+          &.payment_maestro {
+            background-position-x: 112px;
+          }
+
+          &.payment_paypal {
+            background-position-x: 100%;
+          }
+
+          &:last-child {
+            margin-right: 13px;
+          }
+        }
+      }
+    }
+
+    .contact-layout-2 {
+      padding-bottom: 28px;
+      margin-top: -2px;
+      li {
+        &.phone,
+        &.email,
+        &.address {
+          padding-left: 50px;
+          position: relative;
+          font-size: $BodyFontSizeS;
+          margin: 8px 0;
+          p{
+            margin-bottom: 0;
+            font-weight: $font-weight-bold;
+            line-height: 1;
+            
+          }
+          small{
+            color: $lightent_accent_accent;
+            font-size: $BodyFontSizeS;
+          }
+          span[class^="flaticon-"] {
+            position: absolute;
+            left: 0;
+
+            &:before {
+              font-size: $BodyFontSizeM * 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

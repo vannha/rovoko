@@ -1,0 +1,24 @@
+.rovoko-googlemap-wrapper {
+  .map-render {
+    .gm-style .gm-style-iw-c {
+      border-radius: 0
+    }
+
+    .info-content {
+      text-align: center;
+
+      h5 {
+        margin: 0 20px;
+      }
+
+      span {
+        margin-top: 10px;
+        display: block;
+
+        &:empty {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

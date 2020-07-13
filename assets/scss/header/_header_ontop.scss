@@ -1,0 +1,129 @@
+.header-ontop {
+  position: absolute;
+  top: $header_ontop_top_space;
+  left: 0;
+  right: 0;
+  z-index: 901;
+  @media (max-width: $screen-sm-max) {
+    top: $header_ontop_top_space / 2;
+  }
+  /*Header top*/
+  .ef5-header-top {
+    .topbar {
+      &.topbar-layout-2 {
+        .header-inner {
+          padding: 0;
+          max-width: initial;
+        }
+        .topbar-content:after{
+          content: none;
+        }
+      }
+
+      &.topbar-layout-1 {
+        .action-button {
+          position: unset;
+
+          a.button {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-extra,
+  .btn-nav-mobile-wrap[class*="separator"] {
+    &:before {
+      background: rgba($ontop_regular, 0.25) !important;
+    }
+  }
+
+  .social-menu-items {
+    .custom-text {
+
+      a {
+        color: $ontop_regular;
+
+        &:hover {
+          color: $ontop_hover;
+        }
+      }
+    }
+  }
+
+  .nav-extra {
+    a {
+      &.ef5-header-search-icon {
+        span:before {
+          color: $ontop_regular;
+        }
+
+        &:hover {
+          span:before {
+            color: $ontop_hover;
+          }
+        }
+      }
+    }
+
+    .header-icon,
+    .nav-link {
+      color: $ontop_regular;
+
+      &.ef5-header-cart-icon {
+        .header-cart-subtotal {
+          color: $ontop_regular;
+        }
+
+        &:hover {
+          .header-cart-subtotal {
+            color: $ontop_hover;
+          }
+        }
+      }
+
+      .icon, .fal {
+        &:before {
+          color: $ontop_regular;
+        }
+      }
+
+      &:hover {
+        .icon {
+          &:before {
+            color: $ontop_hover;
+          }
+        }
+
+        .icon, .fal {
+          &:before {
+            color: $ontop_hover;
+          }
+        }
+      }
+    }
+
+    .btn-nav-mobile {
+      color: $ontop_regular;
+
+      &:before,
+      &:after,
+      span {
+        background-color: $ontop_regular;
+      }
+
+      &:hover {
+        color: $ontop_hover;
+
+        &:before,
+        &:after,
+        span {
+          background-color: $ontop_hover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.single-project {
+  .ef5-blogs .ef5-single{
+    padding-top: 0;
+  }
+  div[id^="gallery-"] {
+    margin-bottom: 15px;
+  }
+
+  .project-meta {
+    .ef5-date {
+      font-size: $BodyFontSizeL;
+      text-transform: uppercase;
+      color: $accent_color;
+      margin-bottom: 10px;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .ef5-post-header {
+      .ef5-heading {
+        font-size: 40px;
+        line-height: 1.075;
+        margin-bottom: 25px;
+      }
+
+      & + .project-des {
+        margin-top: 0 !important;;
+      }
+    }
+
+    .project-single-meta {
+      &.project-des {
+        font-size: $BodyFontSizeL;
+        line-height: 1.55555555556;
+      }
+
+      .meta-icon {
+        width: 53px;
+        min-height: 53px;
+        background: $MainBorderColor;
+        @include border-radius(50%);
+        position: relative;
+        margin-right: 15px;
+
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          @include transform(translate(-50%, -50%));
+
+          &:before {
+            line-height: 1.25;
+            font-size: 20px;
+            color: $primary_color;
+          }
+        }
+      }
+
+      .meta-text {
+        .meta-des {
+          font-size: $BodyFontSizeL;
+          color: $accent_color;
+        }
+      }
+    }
+
+    @media (max-width: $screen-md-max) {
+      .ef5-post-header .ef5-heading {
+        font-size: $H2Size;
+      }
+      .ef5-date {
+        font-size: inherit;
+      }
+      .project-single-meta {
+        .meta-title .meta-text,
+        .meta-text .meta-des,
+        &.project-des {
+          font-size: inherit;
+        }
+      }
+    }
+    @media (max-width: $screen-md-max) {
+
+    }
+  }
+}
+
+.archive-project {
+  .ef5-list {
+    .ef5-tagged-in {
+      margin-bottom: 8px;
+      margin-top: 11px;
+
+      a {
+        font-size: $BodyFontSizeXXS;
+        text-transform: uppercase;
+      }
+    }
+
+    .post-image.thumbnai-is-bg > img {
+      width: 91.16%;
+    }
+
+    .ef5-loop-header {
+      margin-bottom: 26px;
+      margin-top: 10px;
+    }
+
+    .ef5-excerpt {
+      @include text-multi-line(17px, 1.64705882, 4);
+      min-height: auto;
+    }
+    @media (max-width: $screen-lg-max) {
+      .ef5-excerpt {
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+
+}

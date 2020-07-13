@@ -1,0 +1,239 @@
+.elementor-widget-rovoko_post_grid {
+  .rovoko-post-wrapper {
+    .post {
+      margin-bottom: 40px;
+
+      &:hover {
+        .ef5-featured {
+          .ef5-btn {
+            @include transform(translateX(0));
+          }
+        }
+      }
+
+      .ef5-heading {
+        @include new-text-multi-line();
+
+        &:hover a {
+          color: $primary_color;
+        }
+      }
+
+      .ef5-excerpt {
+        margin-top: 13px;
+      }
+
+      .ef5-featured {
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 15px;
+
+        .ef5-btn {
+          @include transform(translateX(100%));
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          min-height: 48px;
+          min-width: 48px;
+          padding: 0;
+
+          i {
+            position: absolute;
+            color: white;
+            left: 50%;
+            top: 50%;
+            @include transform(translate(-50%, -50%));
+
+            &:before {
+              color: $white;
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .post-meta {
+        margin: 0 -9px;
+
+        .ef5-posted-by, .ef5-comments-link {
+          display: inline-block;
+          padding: 9px 8px 5px 9px;
+
+          a {
+            color: $lightent_accent_accent;
+            text-transform: uppercase;
+
+            &:hover {
+              color: $primary_color;
+            }
+          }
+
+          .meta-icon {
+            margin-right: -5px;
+            color: $primary_color;
+
+            .author-url {
+              margin-left: -6px;
+            }
+          }
+
+        }
+      }
+    }
+
+
+    &.layout-2 {
+      .post {
+        margin-bottom: 18px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .ef5-featured {
+        margin-bottom: 0;
+      }
+
+      .ef5-heading {
+        color: #41508a;
+        letter-spacing: -0.02em;
+
+        &.h1 {
+          font-size: 37px;
+        }
+      }
+
+      .odd {
+        text-align: left;
+
+        .ef5-date {
+          margin-right: 13px;
+        }
+
+        .ef5-post-header {
+          margin-left: 13px;
+        }
+      }
+
+      .even {
+        text-align: right;
+        flex-direction: row-reverse;
+
+        .date-and-title {
+          flex-direction: row-reverse;
+        }
+
+        .ef5-date {
+          margin-left: 13px;
+        }
+
+        .ef5-post-header {
+          margin-right: 13px;
+        }
+      }
+
+      .date-and-title {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+        align-items: center;
+      }
+
+      .ef5-date {
+        min-width: 87px;
+        min-height: 87px;
+        border: $MainBorder;
+        border-radius: 10px;
+
+        &:hover {
+          a {
+            color: $accent_color;
+          }
+        }
+
+        a {
+          font-size: $BodyFontSizeL;
+          color: $primary_color;
+          font-weight: bold;
+
+          .published {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            span {
+              font-size: $BodyFontSizeM * 2;
+              display: block;
+              line-height: 1;
+            }
+          }
+        }
+      }
+
+      .ef5-btn {
+        margin-top: 13px;
+        text-transform: unset;
+      }
+
+      [dir="rtl"] & {
+        .date-and-title {
+          flex-direction: row-reverse;
+        }
+
+        .odd {
+          .ef5-date {
+            margin-left: 13px;
+            margin-right: 0;
+          }
+
+          .ef5-post-header {
+            margin-right: 13px;
+            margin-left: 0;
+          }
+        }
+
+        .even {
+          .ef5-date {
+            margin-right: 13px;
+            margin-left: 0;
+          }
+
+          .ef5-post-header {
+            margin-left: 13px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $screen-lg-max) {
+      &.layout-2 {
+        .ef5-heading {
+          &.h1 {
+            font-size: 28px;
+          }
+        }
+      }
+      &.layout-1 {
+        .post-meta {
+          font-size: $BodyFontSizeS;
+        }
+      }
+      .view-all-btn {
+        .ef5-btn {
+          font-size: $BodyFontSizeXXS;
+        }
+      }
+    }
+    @media (max-width: $screen-md-min - 1) {
+      &.layout-2 {
+        .post {
+          margin-bottom: 70px;
+        }
+      }
+    }
+  }
+}

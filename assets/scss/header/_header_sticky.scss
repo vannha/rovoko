@@ -1,0 +1,124 @@
+.sticky-on {
+  &.header-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.9);
+
+    .nav-extra,
+    .btn-nav-mobile-wrap[class*="separator"] {
+      &:before {
+        background: rgba($sticky_regular, 0.25) !important;
+      }
+    }
+
+    .social-menu-items {
+      a {
+        color: $sticky_regular;
+
+        &:hover {
+          border-color: $sticky_hover;
+          color: $sticky_hover;
+        }
+      }
+    }
+
+    .nav-extra {
+      a {
+        &.ef5-header-search-icon {
+          span:before {
+            color: $sticky_regular;
+          }
+
+          &:hover {
+            span:before {
+              color: $sticky_hover;
+            }
+          }
+        }
+      }
+
+      .header-icon,
+      .nav-link {
+        color: $sticky_regular;
+
+        &.ef5-header-cart-icon {
+          .header-cart-subtotal {
+            color: $sticky_regular;
+          }
+
+          &:hover {
+            .header-cart-subtotal {
+              color: $sticky_hover;
+            }
+          }
+        }
+
+        .icon, .fal {
+          &:before {
+            color: $sticky_regular;
+          }
+        }
+
+        &:hover {
+          .icon {
+            &:before {
+              color: $sticky_hover;
+            }
+          }
+
+          .icon, .fal {
+            &:before {
+              color: $sticky_hover;
+            }
+          }
+        }
+      }
+
+      .btn-nav-mobile {
+        color: $sticky_regular;
+
+        &:before,
+        &:after,
+        span {
+          background-color: $sticky_regular;
+        }
+
+        &:hover {
+          color: $sticky_hover;
+
+          &:before,
+          &:after,
+          span {
+            background-color: $sticky_hover;
+          }
+        }
+      }
+    }
+
+    .ef5-header-top {
+      display: none !important;
+    }
+  }
+
+  &.scrollDown {
+    @include transform(translateY(-100px));
+  }
+
+
+}
+
+.admin-bar {
+  .header-sticky {
+    top: 32px;
+  }
+
+  @media (max-width: 782px) {
+    .header-sticky {
+      top: 46px;
+    }
+  }
+}

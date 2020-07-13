@@ -1,0 +1,37 @@
+.ef5-loop-atts {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  padding: 20px;
+  @include transform(translateY(0));
+  @include transition();
+
+  .ef5-badge {
+    text-transform: uppercase;
+    @include border-radius(3px);
+    padding: 3px 12px;
+    line-height: 2;
+    color: $white;
+    margin-bottom: 5px;
+
+    &.sale {
+      background: $primary_color;
+    }
+
+    &.hot {
+      background: #ff0000;
+    }
+
+    &.new {
+      background: #b1d750;
+    }
+  }
+}
+
+.columns-5 {
+  .ef5-loop-atts {
+    padding: 10px;
+  }
+}

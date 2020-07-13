@@ -1,0 +1,26 @@
+.page-description,
+.term-description {
+  margin-bottom: 40px;
+}
+
+.ef5-woo-count-order {
+  margin-bottom: 30px;
+  border-bottom: $MainBorder;
+
+  .woocommerce-result-count,
+  .woocommerce-ordering {
+    margin-bottom: 12px;
+    font-size: $BodyFontSize;
+    font-family: Rubik;
+    line-height: 1.7;
+  }
+	.woocommerce-ordering{
+		select.orderby{
+			background-position: right;
+			background-size: 13px;
+			padding-top: 0;
+			padding-bottom: 0;
+			border: none;
+		}
+	}
+}

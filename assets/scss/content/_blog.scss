@@ -1,0 +1,18 @@
+.ef5-blogs {
+  //padding-top: 100px;
+  padding-bottom: 84px;
+  @media (max-width: $screen-lg-max) {
+    padding-bottom: 54px;
+  }
+  .ef5-single {
+    padding-top: 33px;
+    @media (min-width: 1200px) {
+      .ef5-content-area {
+        &[class*=col-lg] {
+          padding-right: 35px
+        }
+      }
+    }
+  }
+
+}

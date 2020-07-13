@@ -1,0 +1,63 @@
+.ef5-meta {
+  margin: 0 -17px;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 18px;
+  color: $MetaColor;
+
+  > * {
+    padding: 0 17px;
+    padding-top: 15px;
+  }
+
+  a:not(.author-url) {
+    color: $MetaColor;
+
+    &:hover {
+      color: $MetaColorHover;
+    }
+  }
+
+  .avatar {
+    margin-right: 10px;
+
+    [dir="rtl"] & {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
+  .meta-icon {
+    color: $primary_color;
+
+    &:before {
+      font-size: 18px;
+    }
+  }
+}
+
+.ef5-date {
+  .meta-icon {
+    //opacity: 0;
+  }
+}
+
+.single {
+  .ef5-meta {
+    .meta-icon {
+      color: inherit;
+    }
+
+    .ef5-like + .ef5-comments-link {
+      //padding-left: 0;
+    }
+
+    .ef5-like {
+      padding-right: 0;
+
+      [dir="rtl"] & {
+		  padding-left: 0;
+      }
+    }
+  }
+}
