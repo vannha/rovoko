@@ -13,7 +13,7 @@
   }
 
   @media (min-width: 1366px) {
-    &.header-ontop {
+    /* &.header-ontop {
       left: 50%;
       right: auto;
       @include transform(translateX(-50%));
@@ -22,7 +22,7 @@
       .container{
 
       }
-    }
+    } */
     .header-inner.no-container {
       padding-left: 55px;
       padding-right: 55px;
