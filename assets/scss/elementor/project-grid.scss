@@ -438,5 +438,10 @@
         margin-top: 70px;
       }
     }
+    &.layout-grid-3{
+      .post-image img{
+        width: 100%;
+      }
+    }
   }
 }
