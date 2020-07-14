@@ -998,7 +998,7 @@ if ( ! function_exists( 'rovoko_ontop_header_opts' ) ) {
 					'type'         => 'color_rgba',
 					'title'        => esc_html__( 'Background', 'rovoko' ),
 					'output'       => array(
-						'background-color' => '.header-ontop'
+						'background-color' => '.header-ontop .main-header .header-inner'
 					),
 					'force_output' => $force_output,
 					'required'     => array( 'header_ontop', '=', '1' )

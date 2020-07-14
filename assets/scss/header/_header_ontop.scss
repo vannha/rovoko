@@ -26,6 +26,14 @@
         }
       }
     }
+
+  }
+  .main-header .container{
+    max-width: 1170px;
+    @media (min-width: 1200px){
+      padding-left: 50px;
+      padding-right: 50px;
+    }
   }
 
   .nav-extra,
