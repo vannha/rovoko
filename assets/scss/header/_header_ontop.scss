@@ -6,9 +6,6 @@
   @media (min-width: 1200px){
     top: $header_ontop_top_space;  
   }
-  @media (max-width: $screen-sm-max) {
-    top: $header_ontop_top_space / 2;
-  }
   /*Header top*/
   .ef5-header-top {
     .topbar {
