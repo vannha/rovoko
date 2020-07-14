@@ -456,9 +456,9 @@ function rovoko_inline_styles() {
 	);
 	/* Default Header Color */
 	$header_link_color = rovoko_get_opts( 'header_link_colors', apply_filters( 'rovoko_header_link_color', [
-		'regular' => $primary_color,
-		'hover'   => $accent_color,
-		'active'  => $accent_color
+		'regular' => $accent_color,
+		'hover'   => $primary_color,
+		'active'  => $primary_color
 	] ) );
 	printf( ':root{
             --header_regular: %1$s;
