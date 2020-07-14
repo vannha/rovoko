@@ -82,7 +82,7 @@ if ( ! function_exists( 'rovoko_configs' ) ) {
 			'sticky_link_color_hover'                     => 'var(--primary-color)',
 			'sticky_link_color_active'                    => 'var(--primary-color)',
 			// Dropdown
-			'dropdown_bg'                                 => 'rgb(128,128,128)',
+			'dropdown_bg'                                 => 'rgb(0,0,0)',
 			'dropdown_regular'                            => 'white',
 			'dropdown_hover'                              => 'black',
 			'dropdown_active'                             => 'black',
