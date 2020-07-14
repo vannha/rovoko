@@ -31,8 +31,8 @@
       }
     }
     .container{
-      max-width: 1170px;
       @media (min-width: 1200px){
+        max-width: 1170px;
         padding-left: 50px;
         padding-right: 50px;
       }
@@ -40,8 +40,8 @@
 
   }
   .main-header .container{
-    max-width: 1170px;
     @media (min-width: 1200px){
+      max-width: 1170px;
       padding-left: 50px;
       padding-right: 50px;
     }
