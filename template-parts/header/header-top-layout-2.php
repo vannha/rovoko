@@ -4,7 +4,7 @@
  *
  */
 ?>
-<div class="<?php rovoko_header_inner_class(); ?>">
+<div class="<?php rovoko_header_inner_class(); ?> aaa">
     <div class="row justify-content-between align-items-center topbar-content">
 		<?php
 		rovoko_top_bar_social_items();
