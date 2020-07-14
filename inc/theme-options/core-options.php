@@ -193,7 +193,7 @@ if ( ! function_exists( 'rovoko_header_top_opts' ) ) {
 					'id'       => 'header_top_bg',
 					'type'     => 'background',
 					'title'    => esc_html__( 'Background', 'rovoko' ),
-					'output'   => array( '.ef5-header-top .topbar,.ef5-header-top .topbar.topbar-layout-3 .right-content .woocs-style-1-dropdown-menu' ),
+					'output'   => array( '.ef5-header-top .topbar,.header-ontop .ef5-header-top .header-inner, .ef5-header-top .topbar.topbar-layout-3 .right-content .woocs-style-1-dropdown-menu' ),
 					'required' => array( 'header_top_layout', '!=', 'none' ),
 				),
 				array(
