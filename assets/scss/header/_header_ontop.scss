@@ -41,6 +41,9 @@
         padding-left: 50px;
         padding-right: 50px;
       }
+      @media (max-width: 1199px){
+        max-width: 100%;
+      }
     }
 
   }
@@ -49,6 +52,9 @@
       max-width: 1170px;
       padding-left: 50px;
       padding-right: 50px;
+    }
+    @media (max-width: 1199px){
+      max-width: 100%;
     }
   }
 
