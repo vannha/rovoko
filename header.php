@@ -18,6 +18,13 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>> 
+    <?php 
+    if ( function_exists( 'wp_body_open' ) ) {
+        wp_body_open();
+    } else {
+        do_action( 'wp_body_open' );
+    }
+    ?>
     <?php rovoko_page_loading(); ?>
     <div id="ef5-page" class="<?php rovoko_page_css_class();?>">
     <div id="ef5-header-wrap">
