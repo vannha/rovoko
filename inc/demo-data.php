@@ -5,7 +5,7 @@
 if ( ! function_exists( 'rovoko_enable_export_mode' ) ) {
 	add_filter( 'ef5_ie_export_mode', 'rovoko_enable_export_mode' );
 	function rovoko_enable_export_mode() {
-		return false;
+		return true;
 	}
 }
 /**
