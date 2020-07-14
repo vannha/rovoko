@@ -84,8 +84,8 @@ if ( ! function_exists( 'rovoko_configs' ) ) {
 			// Dropdown
 			'dropdown_bg'                                 => 'rgb(0,0,0)',
 			'dropdown_regular'                            => 'white',
-			'dropdown_hover'                              => 'black',
-			'dropdown_active'                             => 'black',
+			'dropdown_hover'                              => 'var(--primary-color)',
+			'dropdown_active'                             => 'var(--primary-color)',
 			// Comments 
 			'cmt_avatar_size'                             => 95,
 			'cmt_border'                                  => '1px solid #DDDDDD',
