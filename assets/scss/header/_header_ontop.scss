@@ -17,6 +17,11 @@
         .topbar-content:after{
           content: none;
         }
+        .social-items{
+          @media (max-width: 991px){
+            display: none;
+          }
+        }
       }
 
       &.topbar-layout-1 {
