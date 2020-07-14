@@ -11,6 +11,11 @@
 }
 .ef5-header{
 	@include transition(all 0.5s);
+	@media (max-width: 1199px){
+		.container{
+			max-width: 100%;
+		}
+	}
 }
 .main-header{
 	position: relative;
