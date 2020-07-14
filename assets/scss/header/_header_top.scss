@@ -237,6 +237,7 @@
               background: none !important;
               min-width: 25px;
               min-height: auto;
+              margin-left: 5px;
               @include rovoko_social_color('color');
 
               > * {
@@ -244,9 +245,6 @@
                 left: unset;
                 top: unset;
                 @include transform(translate(0, 0))
-              }
-              +a{
-                margin-left: 5px;
               }
             }
           }
