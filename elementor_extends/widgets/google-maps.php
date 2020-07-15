@@ -295,6 +295,15 @@ class Rovoko_GoogleMap_Widget extends Widget_Base {
 				'description' => esc_html__( 'Show or hide Over View Map Control.', 'rovoko' )
 			]
 		);
+		$this->add_control(
+			'embedhtml',
+			[
+				'label'       => esc_html__( 'Embed HTML', 'revoko' ),
+				'type'        => 'textarea',
+				'default'     => '',
+				'description' => esc_html__( 'Enter the embed code html', 'revoko' )
+			]
+		);
 		$this->end_controls_section();
 		$this->start_controls_section(
 			'section_map_style',
@@ -473,11 +482,15 @@ class Rovoko_GoogleMap_Widget extends Widget_Base {
 				'data-controls'   => rawurlencode( json_encode( $controls ) )
 			]
 		] );
+		if(!empty($settings['embedhtml'])){
+			echo ''.$settings['embedhtml'];
+		}else{
 		?>
-        <div <?php echo '' . $this->get_render_attribute_string( 'wrapper' ); ?>>
-            <div <?php echo '' . $this->get_render_attribute_string( 'map' ); ?>></div>
-        </div>
-		<?php
+	        <div <?php echo '' . $this->get_render_attribute_string( 'wrapper' ); ?>>
+	            <div <?php echo '' . $this->get_render_attribute_string( 'map' ); ?>></div>
+	        </div>
+			<?php
+		}
 	}
 }
 

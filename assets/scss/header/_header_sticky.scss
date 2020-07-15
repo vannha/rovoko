@@ -108,17 +108,5 @@
     @include transform(translateY(-100px));
   }
 
-
 }
 
-.admin-bar {
-  .header-sticky {
-    top: 32px;
-  }
-
-  @media (max-width: 782px) {
-    .header-sticky {
-      top: 46px;
-    }
-  }
-}

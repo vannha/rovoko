@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Rovoko\n"
-"POT-Creation-Date: 2020-06-03 17:15+0700\n"
-"PO-Revision-Date: 2020-06-03 17:15+0700\n"
+"POT-Creation-Date: 2020-07-14 16:34+0700\n"
+"PO-Revision-Date: 2020-07-14 16:34+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1595,7 +1595,7 @@ msgstr ""
 #: elementor_extends/widgets/post_grid.php:1010
 #: elementor_extends/widgets/project_grid.php:230
 #: elementor_extends/widgets/project_grid.php:231
-#: elementor_extends/widgets/project_grid.php:905
+#: elementor_extends/widgets/project_grid.php:908
 #: elementor_extends/widgets/project_masonry.php:1176
 #: template-parts/loop/content-project.php:29
 msgid "View More"
@@ -2621,27 +2621,27 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/custom-post/portfolio.php:16
+#: inc/custom-post/portfolio.php:18
 msgid "EF5Frame Portfolios"
 msgstr ""
 
-#: inc/custom-post/portfolio.php:17
+#: inc/custom-post/portfolio.php:19
 msgid "EF5Frame Portfolio"
 msgstr ""
 
-#: inc/custom-post/portfolio.php:35
+#: inc/custom-post/portfolio.php:37
 msgid "Portfolio Category"
 msgstr ""
 
-#: inc/custom-post/portfolio.php:36
+#: inc/custom-post/portfolio.php:38
 msgid "Portfolio Categories"
 msgstr ""
 
-#: inc/custom-post/portfolio.php:39
+#: inc/custom-post/portfolio.php:41
 msgid "Portfolio Tag"
 msgstr ""
 
-#: inc/custom-post/portfolio.php:40
+#: inc/custom-post/portfolio.php:42
 msgid "Portfolio Tags"
 msgstr ""
 
@@ -3087,11 +3087,11 @@ msgstr ""
 msgid "View All Projects"
 msgstr ""
 
-#: inc/functions/template-media.php:418
+#: inc/functions/template-media.php:419
 msgid "View Our Portfolio"
 msgstr ""
 
-#: inc/functions/template-media.php:594
+#: inc/functions/template-media.php:598
 msgid "By"
 msgstr ""
 
@@ -5098,7 +5098,7 @@ msgid "Rovoko"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://dev.joomexp.com/wordpress/rovoko"
+msgid "http://demo.spyropress.com/themeforest/rovoko/"
 msgstr ""
 
 #. Description of the plugin/theme

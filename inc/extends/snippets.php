@@ -132,18 +132,22 @@ function rovoko_get_content_image( $args = []){
         'class'   => 'content-image',
         'echo'    => true
     ]);
+
     $src = $title = $alt = $srcset = $sizes = '';
+
     if ( empty($args['content']) )
-        $args['content'] = get_the_content();
+        $args['content'] = apply_filters('the_content', get_post_field('post_content'));
+        //$args['content'] = get_the_content(); 
     // src
     if( preg_match( '/<img\s[^>]*?src=([\'"])(.+?)\1/is', $args['content'], $_src )) {
         $src = isset($_src[2]) ? $_src[2] : '';
     }
+
     // srcset
     if( preg_match( '/<img\s[^>]*?srcset=([\'"])(.+?)\1/is', $args['content'], $_srcset )) { 
         $srcset = isset($_srcset[2]) ? $_srcset[2] : ''; 
     } else {
-        $img_id = rovoko_get_attachment_id_from_url($src);
+        $img_id = rovoko_get_attachment_id_from_url($src); 
         $srcset = wp_get_attachment_image_srcset($img_id, 'large');
     }
     // sizes
@@ -153,6 +157,7 @@ function rovoko_get_content_image( $args = []){
         $img_id = rovoko_get_attachment_id_from_url($src);
         $sizes = wp_get_attachment_image_sizes($img_id);
     }
+
     // title  
     if(preg_match( '/<img\s[^>]*?title=([\'"])(.+?)\1/is', $args['content'], $_title )) {
         $title = isset($_title[2]) ? $_title[2] : '';
@@ -193,6 +198,7 @@ if ( ! function_exists( 'rovoko_get_attachment_id_from_url' ) ) {
         }
 
         $file  = basename( $url );
+
         $query = array(
             'post_type'  => 'attachment',
             'fields'     => 'ids',
